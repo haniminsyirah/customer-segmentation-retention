@@ -93,7 +93,3 @@ Heatmaps and snake plots indicate that Recency and Monetary spend are the most d
 - Optimal Number of Clusters:
 The elbow method and silhouette scores suggest that four clusters provide the best balance between segmentation granularity and interpretability.
 
-
-This project is for educational purposes. Feel free to adapt and extend it for your own analysis.
-
-Would you like me to prepare this in a markdown file (README.md) format, or do you require additional modifications?
