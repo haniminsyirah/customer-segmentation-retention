@@ -2,16 +2,6 @@ Customer Segmentation and Retention Analysis
 
 This project involves performing customer segmentation and retention analysis on an online retail dataset using Python in Google Colab. The analysis includes data cleaning, cohort analysis, RFM segmentation, clustering, and customer lifetime value (CLV) modeling.
 
-Table of Contents
-
-- Introduction
-- Dataset
-- Objectives
-- Methodology
-- Environment & Setup
-- Usage
-- Results & Insights
-
 Introduction
 
 Understanding customer behavior is key to designing targeted marketing strategies, improving customer retention, and increasing revenue. This project applies statistical and machine learning techniques to analyze purchase data, segment customers, and predict future value.
