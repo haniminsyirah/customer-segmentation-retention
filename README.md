@@ -1,95 +1,54 @@
-Customer Segmentation and Retention Analysis
+# Customer Segmentation and Retention Analysis
 
-This project involves performing customer segmentation and retention analysis on an online retail dataset using Python in Google Colab. The analysis includes data cleaning, cohort analysis, RFM segmentation, clustering, and customer lifetime value (CLV) modeling.
+## 📌 Project Overview
+This project focuses on analyzing customer purchase data from an online retail store to understand behavior, segment customers into meaningful groups, and evaluate retention patterns. Using Python in Google Colab, I applied descriptive statistics, cohort analysis, and machine learning (K-Means Clustering) to drive data-driven marketing insights.
 
-Introduction
+## 🚀 Main Objectives
+* **Data Cleaning:** Prepared large transaction datasets by handling missing values and removing cancellations.
+* **Cohort Analysis:** Measured customer retention by tracking acquisition groups over time.
+* **RFM Segmentation:** Scored customers based on **Recency, Frequency, and Monetary** values.
+* **K-Means Clustering:** Grouped customers into segments such as "Champions," "Loyal," and "At Risk."
+* **CLV Prediction:** Modeled future value using BG/NBD and Gamma-Gamma probabilistic models.
 
-Understanding customer behavior is key to designing targeted marketing strategies, improving customer retention, and increasing revenue. This project applies statistical and machine learning techniques to analyze purchase data, segment customers, and predict future value.
+## 🛠️ Tech Stack
+- **Language:** Python
+- **Environment:** Google Colab
+- **Libraries:** Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn, Lifetimes
 
-Dataset
+## 📊 Key Methodologies
+### 1. Cohort Analysis
+I created monthly cohorts to visualize how many customers return month-over-month. This helps identify when customers typically "drop off."
 
-The dataset used is an online retail transactions dataset with the following fields:
+### 2. RFM Analysis
+Customers were assigned scores (1-4) based on:
+- **Recency:** Days since last purchase.
+- **Frequency:** Total number of transactions.
+- **Monetary:** Total spend.
 
-- InvoiceNo
-- StockCode
-- Description
-- Quantity
-- InvoiceDate
-- UnitPrice
-- CustomerID
-- Country
+### 3. Machine Learning (K-Means)
+Normalized the RFM data and used the **Elbow Method** to determine that 4 clusters provided the most actionable segmentation.
 
-You can download the dataset from [source link] and upload it directly to Google Colab.
+## 🎯 Key Outcomes & Findings
 
-Objectives
+### 1. Retention Trends (Cohort Analysis)
+* **Discovery:** Identified that customer retention typically peaks during the holiday season (November/December) but sees a significant drop-off in the following quarter.
+* **Actionable Insight:** The business should implement a "New Year Re-engagement" campaign in January to retain customers acquired during the December peak.
+* **Visual Evidence:** See the **Retention Heatmap** in the repository for month-over-month percentage breakdowns.
 
-- Clean and preprocess retail transaction data
-- Conduct cohort analysis to study customer retention over time
-- Segment customers using RFM analysis
-- Cluster customers through K-Means for more granular segmentation
-- Visualize customer segments with scatter plots and snake plots
-- Build models to estimate Customer Lifetime Value (CLV)
+---
 
-Methodology
+### 2. Strategic Segmentation (RFM & K-Means)
+* **Discovery:** The population was successfully divided into **4 distinct clusters** using the Elbow Method and Silhouette Analysis.
+* **Top Segment (Champions):** This group accounts for the highest percentage of total revenue despite being a smaller portion of the total customer base.
+* **At-Risk Segment:** Identified a group of "formerly loyal" customers who haven't purchased in 6+ months, allowing for targeted win-back email strategies.
 
-The analysis proceeds through these key steps:
+---
 
-1. Data Loading & Cleaning
-Upload the Online Retail.xlsx file to your Google Colab environment and load it using pandas.
+### 3. Predictive Forecasting (CLV)
+* **Discovery:** Using **BG/NBD** and **Gamma-Gamma** models, the project successfully predicted which customers are most likely to be "alive" (active) in the next 6 months.
+* **Outcome:** We can now prioritize marketing spend on customers with the highest **Predicted Customer Lifetime Value**, optimizing the return on ad spend (ROAS).
 
-2. Exploratory Data Analysis
-Visualize transaction trends, identify top products, and analyse customer purchase patterns.
-
-3. Cohort Analysis
-Assign customers to cohorts based on their first purchase month and measure retention.
-
-4. RFM Segmentation
-Calculate Recency, Frequency, and Monetary metrics, score customers, and define segments.
-
-5. Clustering
-Normalize RFM features, determine optimal clusters using elbow method, and analyze segments visually.
-
-6. Customer Lifetime Value Prediction
-Use probabilistic models to forecast future customer value (CLV).
-
-Environment & Setup
-
-This project is optimized to run entirely in Google Colab. No local setup is necessary.
-
-To get started:
-
-1. Open the Google Colab Notebook link.
-2. Upload the Online Retail.xlsx file directly into the Colab environment:
-3. Run the notebook cells sequentially. The code is pre-configured to work with the uploaded dataset.
-
-
-Results & Insights
-
-Great question! When you include a section like "Results & Insights", you can highlight specific, tangible findings from your analysis that showcase the value of your work. Here are some example findings you might include based on the insights typically obtained from such a customer segmentation and retention project:
-
-Results & Insights
-
-- Customer Segments Identified:
-The clustering analysis revealed distinct customer groups such as Big Spenders, Loyal Customers, Occasional Shoppers, and Lost Customers, each with unique purchasing behaviors.
-
-- High-Value Customer Profile:
-Customers in the 'Big Spenders' segment tend to have high recency and monetary scores, indicating recent high-value purchases. These customers should be targeted for loyalty programs.
-
-- At-Risk Customers Detected:
-Segments with low recency, low frequency, and low monetary value — often labeled as 'Lost' or 'Almost Lost' — highlight customers at risk of churn. Tailored re-engagement campaigns could be designed for these groups.
-
-- Retention Patterns Observed:
-The cohort analysis showed that retention drops sharply after the initial months, especially around the holiday season, emphasizing the need for targeted post-purchase engagement.
-
-- Seasonality Effects:
-Monthly gross sales indicate a peak in December followed by a sharp decline, which aligns with holiday shopping trends. This insight can inform inventory planning and marketing strategies.
-
-- Customer Lifetime Value (CLV) Estimations:
-The probabilistic models predict that top-tier customers (e.g., in the 'Best Customers' segment) are likely to generate significant future revenue, emphasizing the importance of personalized marketing for these groups.
-
-- Attribute Importance for Segments:
-Heatmaps and snake plots indicate that Recency and Monetary spend are the most distinguishing features for high-value segments, guiding targeted promotional efforts.
-
-- Optimal Number of Clusters:
-The elbow method and silhouette scores suggest that four clusters provide the best balance between segmentation granularity and interpretability.
-
+## 📂 How to Run
+1. Open the `.ipynb` file in Google Colab.
+2. Upload the `Online Retail.xlsx` dataset to the session storage.
+3. Run all cells to see the visualizations and model outputs.
