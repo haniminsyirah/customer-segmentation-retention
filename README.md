@@ -28,21 +28,18 @@ Customers were assigned scores (1-4) based on:
 ### 3. Machine Learning (K-Means)
 Normalized the RFM data and used the **Elbow Method** to determine that 4 clusters provided the most actionable segmentation.
 
-## 🎯 Key Outcomes & Findings
 
+
+## 🎯 Key Outcomes & Findings
 ### 1. Retention Trends (Cohort Analysis)
 * **Discovery:** Identified that customer retention typically peaks during the holiday season (November/December) but sees a significant drop-off in the following quarter.
 * **Actionable Insight:** The business should implement a "New Year Re-engagement" campaign in January to retain customers acquired during the December peak.
-* **Visual Evidence:** See the **Retention Heatmap** in the repository for month-over-month percentage breakdowns.
 
----
 
 ### 2. Strategic Segmentation (RFM & K-Means)
 * **Discovery:** The population was successfully divided into **4 distinct clusters** using the Elbow Method and Silhouette Analysis.
 * **Top Segment (Champions):** This group accounts for the highest percentage of total revenue despite being a smaller portion of the total customer base.
 * **At-Risk Segment:** Identified a group of "formerly loyal" customers who haven't purchased in 6+ months, allowing for targeted win-back email strategies.
-
----
 
 ### 3. Predictive Forecasting (CLV)
 * **Discovery:** Using **BG/NBD** and **Gamma-Gamma** models, the project successfully predicted which customers are most likely to be "alive" (active) in the next 6 months.
